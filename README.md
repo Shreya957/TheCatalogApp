@@ -41,6 +41,9 @@ python project.py
 * If there is no user session , clicking on Item will go to Item description page.
 ![Screeshot](https://github.com/Shreya957/TheCatalogApp/blob/master/image/ItemDescription.png)
 
+* clinking on each categories will list out the Items in that particular category
+![Screeshot](https://github.com/Shreya957/TheCatalogApp/blob/master/image/CategoryList.png)
+
 * Login via google using the Sign in button in the Right botton corner of the page.
 ![Screeshot](https://github.com/Shreya957/TheCatalogApp/blob/master/image/main_page_2.png)
 
