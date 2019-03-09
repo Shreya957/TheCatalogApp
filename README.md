@@ -27,6 +27,14 @@ vagrant ssh
 
  run the following command
  
+ Below commmands imports the Catalog raw data and sets up the detabase for the project
+ 
+```
+python databaseSetup.py
+python CatalogData.py
+```
+After the above commands run the python project.
+
 ```
 python project.py
 
