@@ -5,43 +5,42 @@ from sqlalchemy import select
 from sqlalchemy.orm import sessionmaker
 
 
-engine = create_engine
-('sqlite:///CatalogApplication.db?check_same_thread=False')
+engine = create_engine('sqlite:///CatalogApplication.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-category1 = Category(name="BasketBall")
-session.add(category1)
+Category1 = Category(name="BasketBall")
+session.add(Category1)
 session.commit()
 
-category2 = Category(name="Soccer")
-session.add(category2)
+Category2 = Category(name="Soccer")
+session.add(Category2)
 session.commit()
 
-category3 = Category(name="Baseball")
-session.add(category3)
+Category3 = Category(name="Baseball")
+session.add(Category3)
 session.commit()
 
-category4 = Category(name="Frisbee")
-session.add(category4)
+Category4 = Category(name="Frisbee")
+session.add(Category4)
 session.commit()
 
-category5 = Category(name="Snowboarding")
-session.add(category5)
+Category5 = Category(name="Snowboarding")
+session.add(Category5)
 session.commit()
 
-category6 = Category(name="Rock Climbing")
-session.add(category6)
+Category6 = Category(name="Rock Climbing")
+session.add(Category6)
 session.commit()
 
-category7 = Category(name="Skating")
-session.add(category7)
+Category7 = Category(name="Skating")
+session.add(Category7)
 session.commit()
 
 
-User1 = User(name="System", email="shreya957@gmail.com")
+User1 = User(name="System", email="shreyankadas@gmail.com")
 session.add(User1)
 session.commit()
 
