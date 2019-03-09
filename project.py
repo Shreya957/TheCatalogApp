@@ -241,8 +241,8 @@ def AddNewItem():
         if login_session['username'] is not None:
             print login_session.get('user_id')
             conn = engine.connect()
-            select_cat_id = "select([Category]).where(Category.name == \
-                             request.form['Category'])"
+            select_cat_id = select([Category]).\
+                where(Category.name == request.form['Category'])
             res = conn.execute(select_cat_id)
             for category_id in res:
                 newItem = Item(name=request.form['itemname'],
