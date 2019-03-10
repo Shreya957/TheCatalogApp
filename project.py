@@ -237,8 +237,8 @@ def getUserID(email):
 
 @app.route('/catalog/new', methods=['GET', 'POST'])
 def AddNewItem():
-    if request.method == 'POST':
-        if login_session['username'] is not None:
+    if login_session.get('username') is not None:
+        if request.method == 'POST':
             print login_session.get('user_id')
             conn = engine.connect()
             select_cat_id = select([Category]).\
@@ -257,9 +257,11 @@ def AddNewItem():
                 order_by(Item.creation_date.desc()).all()
             flash("New Item has been Added")
             return redirect('/catalog')
+        else:
+            categories = session.query(Category).all()
+            return render_template('CreateNewItem.html', categories=categories)
     else:
-        categories = session.query(Category).all()
-        return render_template('CreateNewItem.html', categories=categories)
+        return redirect('/catalog')
 
 
 @app.route('/catalog/<int:category_id>/ItemsList', methods=['GET', 'POST'])
